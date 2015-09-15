@@ -1,0 +1,19 @@
+<div id="container">
+<header>
+  
+</header>
+<main>
+<h1>List of Clients</h1>
+<h3><%= link_to 'New Client', :new_client %></h3>
+<div>
+  <ul>
+    <% @clients.each do |cl| %>
+      <%= render partial: 'index', locals: { client: cl } %>
+    <% end %>
+  </ul>
+</div>
+</main>
+<footer>
+  
+</footer>
+</div>

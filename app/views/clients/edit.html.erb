@@ -1,0 +1,27 @@
+<h1>hello edit</h1>
+<div class="client-form">
+<%= form_for(@client) do |cl| %>
+
+  <div class="field">
+    <%= cl.label 'Name of Client' %><br>
+    <%= cl.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= cl.label 'Cash balance' %><br>
+    <%= cl.text_field :cash_balance %>
+  </div>
+  
+  <div class="field">
+    <%= cl.label 'Share balance' %><br>
+    <%= cl.text_field :share_balance %>
+  </div>
+
+  <div class="field">
+    <%= cl.submit 'Update' %><%= link_to "Delete", @client, method: :delete   %>
+  </div>
+  <div class="link">
+    <%= link_to 'Back to Home', root_path %>
+  </div>
+<% end %>
+</div>

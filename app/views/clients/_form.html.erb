@@ -1,0 +1,20 @@
+<%= form_for(@client) do |cl| %>
+
+  <div class="field">
+    <%= cl.label 'Name of new Client' %><br>
+    <%= cl.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= cl.label 'Cash balance to start the brokerage' %><br>
+    <%= cl.text_field :cash_balance %>
+    <%= cl.hidden_field :share_balance, :value => 0 %>
+  </div>
+
+  <div class="field">
+    <%= cl.submit 'Add' %>
+  </div>
+  <div class="link">
+    <%= link_to 'Back to Home', root_path %>
+  </div>
+<% end %>

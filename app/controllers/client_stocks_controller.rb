@@ -1,0 +1,2 @@
+class ClientStocksController < ApplicationController
+end
