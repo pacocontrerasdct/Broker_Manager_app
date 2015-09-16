@@ -2,6 +2,7 @@ class ClientsController < ApplicationController
   
   def index
     @clients = Client.all
+    @stocks = ClientStock.joins(:stock, :client)
   end
 
   def new
@@ -19,6 +20,7 @@ class ClientsController < ApplicationController
 
   def show
     @client = Client.find(params[:id])
+
   end
 
   def edit

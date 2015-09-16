@@ -4,6 +4,14 @@
       <li>Client Name: <%= client.name %></li>
       <li>Cash Balance: <%= client.cash_balance %></li>
       <li>Share Balance: <%= client.share_balance %></li>
+    
+      
+      <% @stocks.each do |stk| %>
+      <li>Stocks: <%= stk.stock.name %></li>
+      <li>Client: <%= stk.client_id %></li>
+      <li>Amount: <%= stk.num_shares %></li>
+      <% end %>
+
       <li><%= link_to 'Edit', "clients/#{client.id}/edit" %></li>
     </ul>
   </li>
